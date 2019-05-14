@@ -24,11 +24,11 @@
             <artifactId>hapi-fhir-structures-dstu3</artifactId>
             <version>2.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.tch.fc</groupId>
+ 		<dependency>
+            <groupId>org.immregistries.vfa</groupId>
             <artifactId>ForecastConnector</artifactId>
-            <version>3.13</version>
-        </dependency>
+            <version>3.15</version>
+        </dependency> 
     </dependencies>
     
 </project>

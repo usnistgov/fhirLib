@@ -8,9 +8,9 @@ package gov.nist.fhir;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import org.tch.fc.model.ForecastEngineIssue;
-import org.tch.fc.model.ForecastEngineIssueLevel;
-import org.tch.fc.model.ForecastEngineIssueType;
+import org.immregistries.vfa.connect.model.ForecastEngineIssue;
+import org.immregistries.vfa.connect.model.ForecastEngineIssueLevel;
+import org.immregistries.vfa.connect.model.ForecastEngineIssueType;
 
 /**
  *
@@ -60,11 +60,14 @@ public class TCHUtils {
             System.out.println("subissue = " + subIssue[1]);
 
             if (subIssue[1].startsWith("01")) {
-                issue.setIssueType(ForecastEngineIssueType.AUTHENTICATION_FAILURE);
+                //issue.setIssueType(ForecastEngineIssueType.AUTHENTICATION_FAILURE);                
+                issue.setIssueType(ForecastEngineIssueType.UNEXPECTED_FORMAT);
             } else if (subIssue[1].startsWith("02")) {
-                issue.setIssueType(ForecastEngineIssueType.ENGINE_NOT_AVAILABLE);
+            //    issue.setIssueType(ForecastEngineIssueType.ENGINE_NOT_AVAILABLE);
+            issue.setIssueType(ForecastEngineIssueType.UNEXPECTED_FORMAT);
             } else if (subIssue[1].startsWith("03")) {
-                issue.setIssueType(ForecastEngineIssueType.MATCH_NOT_FOUND);
+              //  issue.setIssueType(ForecastEngineIssueType.MATCH_NOT_FOUND);
+              issue.setIssueType(ForecastEngineIssueType.UNEXPECTED_FORMAT);
             } else if (subIssue[1].startsWith("04")) {
                 issue.setIssueType(ForecastEngineIssueType.UNEXPECTED_FORMAT);
             } else {
