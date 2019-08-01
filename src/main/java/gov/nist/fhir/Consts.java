@@ -11,6 +11,7 @@ package gov.nist.fhir;
  */
 public final class Consts {
     
+    public static final String PARAMETER_NAME_TEST_CASE_NUMBER = "testCaseNumber";
     public static final String PARAMETER_NAME_GENDER = "gender";
     public static final String PARAMETER_NAME_BIRTH_DATE = "birthDate";
     public static final String PARAMETER_NAME_SERVICE_TYPE = "serviceType";
